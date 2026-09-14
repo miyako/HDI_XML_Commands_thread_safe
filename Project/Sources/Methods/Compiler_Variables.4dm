@@ -1,8 +1,5 @@
 //%attributes = {"invisible":true}
-C_REAL:C285(Demo)
-C_REAL:C285(rb1)
-C_REAL:C285(rb2)
-C_TEXT:C284(Var1)
-C_TEXT:C284(Var2)
-C_TEXT:C284(varXml)
-C_TEXT:C284(vRecNum)
+  // Demo, rb1, rb2, Var1, Var2, varXml are bound as form object dataSources
+  // (button/radio/input) and are auto-declared/typed by their forms; declaring
+  // them here too caused "Redefinition of variable" compiler warnings.
+var vRecNum : Text

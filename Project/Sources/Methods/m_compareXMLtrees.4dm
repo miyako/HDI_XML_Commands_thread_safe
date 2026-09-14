@@ -1,15 +1,10 @@
-//%attributes = {}
-C_TEXT:C284($folderPath; $workerName; $message)
-C_TIME:C306($startComparaison; $endComparaison)
-C_LONGINT:C283($winRef; $totalTime; $nbWorker; $nbLoop; $nbFileToCompare)
-C_BOOLEAN:C305($preemptif)
+//%attributes = {"invisible":true}
+#DECLARE($winRef : Integer; $preemptif : Boolean; $nbWorker : Integer; $nbLoop : Integer; $nbFileToCompare : Integer)
 
-$winRef:=$1
-$preemptif:=$2
-$nbWorker:=$3
-$nbLoop:=$4
-$nbFileToCompare:=$5
-
+var $folderPath; $workerName; $message; $referenceGraphPath : Text
+var $startComparaison; $endComparaison : Time
+var $totalTime; $n; $i : Integer
+var $running : Boolean
 
 $startComparaison:=Milliseconds:C459
 
@@ -59,6 +54,6 @@ End for
 
 $endComparaison:=Milliseconds:C459
 $totalTime:=$endComparaison-$startComparaison
-$message:="Time elapsed for the comparison "+String:C10($totalTime)+" milliseconds."
+$message:=Localized string("MsgTimeElapsedPrefix")+String:C10($totalTime)+Localized string("MsgTimeElapsedSuffix")
 
 CALL FORM:C1391($winRef; "m_updateVar"; $message)

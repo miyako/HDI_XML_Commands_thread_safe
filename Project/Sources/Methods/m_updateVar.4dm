@@ -1,2 +1,3 @@
-//%attributes = {}
-var4:=$1
+//%attributes = {"invisible":true}
+#DECLARE($message : Text)
+var4:=$message

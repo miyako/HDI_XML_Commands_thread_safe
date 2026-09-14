@@ -1,2 +1,2 @@
 //%attributes = {"invisible":true}
-C_BOOLEAN:C305(<>Quit)
+  // <>Quit removed: HDI splash now uses Form.quit

@@ -1,12 +1,8 @@
-//%attributes = {}
-C_TEXT:C284($1; $2)
-C_TEXT:C284($path1; $path2)
+//%attributes = {"invisible":true}
+#DECLARE($path1 : Text; $path2 : Text)->$result : Boolean
 
-$path1:=$1
-$path2:=$2
-
-C_TEXT:C284($domRef1; $domRef2)
-C_BOOLEAN:C305($error)
+var $domRef1; $domRef2 : Text
+var $error : Boolean
 
 
 
@@ -30,4 +26,4 @@ Else
 End if 
 
 
-$0:=Not:C34($error)
+$result:=Not:C34($error)

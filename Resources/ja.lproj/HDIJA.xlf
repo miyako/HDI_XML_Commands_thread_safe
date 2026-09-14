@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="Project/Sources/Forms/HDI/form.4DForm" source-language="en" target-language="ja">
+	<body>
+	  <trans-unit id="HDI_BtnDemo" resname="HDI_BtnDemo">
+		<source>Demo</source>
+		<target>デモ</target>
+	  </trans-unit>
+	  <trans-unit id="BtnClose" resname="BtnClose">
+		<source>Close</source>
+		<target>閉じる</target>
+	  </trans-unit>
+	  <trans-unit id="HDI_TxtInfo1" resname="HDI_TxtInfo1">
+		<source>How Do I...</source>
+		<target>How Do I...</target>
+	  </trans-unit>
+	  <trans-unit id="HDI_TxtInfo2" resname="HDI_TxtInfo2">
+		<source>… use XML Command with preemptives processes?</source>
+		<target>…プリエンプティブプロセスでXMLコマンドを使うには?</target>
+	  </trans-unit>
+	  <trans-unit id="HDI_TxtVersion" resname="HDI_TxtVersion">
+		<source>(4D v16 and above…)</source>
+		<target>(4D v16以降…)</target>
+	  </trans-unit>
+	  <trans-unit id="HDI_TxtSorryDesignMode" resname="HDI_TxtSorryDesignMode">
+		<source>Do not attempt to open this HDI in Design mode using this version; if you do so, forms and/or methods could be altered because of missing functionality.</source>
+		<target>このバージョンでこのHDIをデザインモードで開かないでください。機能不足によりフォームやメソッドが変更される可能性があります。</target>
+	  </trans-unit>
+	  <trans-unit id="HDI_TxtSorryOldVersion" resname="HDI_TxtSorryOldVersion">
+		<source>Sorry, this “How do I” (HDI) example must be used witha newer version of 4D(v15 R5 and above).</source>
+		<target>申し訳ございません。この「How do I」(HDI)サンプルはより新しいバージョンの4D(v15 R5以降)で使用する必要があります。</target>
+	  </trans-unit>
+	  <trans-unit id="HDI_TxtSorryPlugin" resname="HDI_TxtSorryPlugin">
+		<source>The plugin xxx is mandatory</source>
+		<target>プラグイン xxx が必須です</target>
+	  </trans-unit>
+	  <trans-unit id="HDI_TxtSorry32Bit" resname="HDI_TxtSorry32Bit">
+		<source>Sorry preemptive processes are available only in the 64-bits versions.</source>
+		<target>申し訳ございません。プリエンプティブプロセスは64ビット版でのみ使用できます。</target>
+	  </trans-unit>
+	</body>
+  </file>
+</xliff>

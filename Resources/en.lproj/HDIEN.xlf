@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="Project/Sources/Forms/HDI/form.4DForm" source-language="en" target-language="en">
+	<body>
+	  <trans-unit id="HDI_BtnDemo" resname="HDI_BtnDemo">
+		<source>Demo</source>
+		<target>Demo</target>
+	  </trans-unit>
+	  <trans-unit id="BtnClose" resname="BtnClose">
+		<source>Close</source>
+		<target>Close</target>
+	  </trans-unit>
+	  <trans-unit id="HDI_TxtInfo1" resname="HDI_TxtInfo1">
+		<source>How Do I...</source>
+		<target>How Do I...</target>
+	  </trans-unit>
+	  <trans-unit id="HDI_TxtInfo2" resname="HDI_TxtInfo2">
+		<source>… use XML Command with preemptives processes?</source>
+		<target>… use XML Command with preemptives processes?</target>
+	  </trans-unit>
+	  <trans-unit id="HDI_TxtVersion" resname="HDI_TxtVersion">
+		<source>(4D v16 and above…)</source>
+		<target>(4D v16 and above…)</target>
+	  </trans-unit>
+	  <trans-unit id="HDI_TxtSorryDesignMode" resname="HDI_TxtSorryDesignMode">
+		<source>Do not attempt to open this HDI in Design mode using this version; if you do so, forms and/or methods could be altered because of missing functionality.</source>
+		<target>Do not attempt to open this HDI in Design mode using this version; if you do so, forms and/or methods could be altered because of missing functionality.</target>
+	  </trans-unit>
+	  <trans-unit id="HDI_TxtSorryOldVersion" resname="HDI_TxtSorryOldVersion">
+		<source>Sorry, this “How do I” (HDI) example must be used witha newer version of 4D(v15 R5 and above).</source>
+		<target>Sorry, this “How do I” (HDI) example must be used witha newer version of 4D(v15 R5 and above).</target>
+	  </trans-unit>
+	  <trans-unit id="HDI_TxtSorryPlugin" resname="HDI_TxtSorryPlugin">
+		<source>The plugin xxx is mandatory</source>
+		<target>The plugin xxx is mandatory</target>
+	  </trans-unit>
+	  <trans-unit id="HDI_TxtSorry32Bit" resname="HDI_TxtSorry32Bit">
+		<source>Sorry preemptive processes are available only in the 64-bits versions.</source>
+		<target>Sorry preemptive processes are available only in the 64-bits versions.</target>
+	  </trans-unit>
+	</body>
+  </file>
+</xliff>

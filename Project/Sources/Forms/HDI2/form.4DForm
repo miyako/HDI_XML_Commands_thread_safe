@@ -41,8 +41,8 @@
 					"dataSource": "TabControl",
 					"dataSourceTypeHint": "arrayText",
 					"labels": [
-						"Page 1",
-						"Page 2"
+						":xliff:HDI2_TabPage1",
+						":xliff:HDI2_TabPage2"
 					],
 					"action": "gotoPage",
 					"events": [
@@ -95,7 +95,7 @@
 					"visibility": "hidden",
 					"sizingX": "grow",
 					"sizingY": "grow",
-					"stroke": "#FF6347",
+					"class": "alert-border",
 					"strokeWidth": 3,
 					"borderRadius": 15
 				},
@@ -108,11 +108,11 @@
 					"visibility": "hidden",
 					"sizingX": "grow",
 					"sizingY": "grow",
-					"stroke": "#FF6347",
+					"class": "alert-border",
 					"fontFamily": ".Lucida Grande UI",
 					"fontSize": 14,
 					"fontWeight": "bold",
-					"text": "Preemptive processes are running only in Compiled mode with 64-bit versions.\rPlease, restart your database in Compiled mode with a 64-bit version."
+					"text": ":xliff:HDI2_ErrMode"
 				},
 				"Variable1": {
 					"type": "input",
@@ -137,8 +137,8 @@
 					"top": 401,
 					"left": 102,
 					"width": 207,
-					"height": 22,
-					"text": "Compare in cooperative",
+					"text": ":xliff:HDI2_BtnCompareCoop",
+					"class": "default",
 					"focusable": false,
 					"method": "ObjectMethods/Button2.4dm",
 					"events": [
@@ -150,8 +150,8 @@
 					"top": 401,
 					"left": 423,
 					"width": 197,
-					"height": 22,
-					"text": "Compare in preemptive",
+					"text": ":xliff:HDI2_BtnComparePreemp",
+					"class": "default",
 					"focusable": false,
 					"method": "ObjectMethods/Button3.4dm",
 					"events": [
@@ -205,7 +205,8 @@
 					"left": 437,
 					"width": 230,
 					"height": 17,
-					"text": "Number of workers"
+					"stroke": "automatic",
+					"text": ":xliff:HDI2_TxtNumberOfWorkers"
 				},
 				"Ruler2": {
 					"type": "ruler",
@@ -233,7 +234,8 @@
 					"left": 102,
 					"width": 230,
 					"height": 17,
-					"text": "Number of XML files to compare"
+					"stroke": "automatic",
+					"text": ":xliff:HDI2_TxtNumberOfFiles"
 				},
 				"Ruler1": {
 					"type": "ruler",
@@ -262,7 +264,8 @@
 					"width": 230,
 					"height": 17,
 					"visibility": "hidden",
-					"text": "Number of loop"
+					"stroke": "automatic",
+					"text": ":xliff:HDI2_TxtNumberOfLoop"
 				}
 			},
 			"entryOrder": [
@@ -295,8 +298,8 @@
 					"top": 387,
 					"left": 77,
 					"width": 245,
-					"height": 21,
-					"text": "Send a ref to another process",
+					"text": ":xliff:HDI2_BtnSendRef",
+					"class": "default",
 					"focusable": false,
 					"method": "ObjectMethods/Button.4dm",
 					"events": [
@@ -310,7 +313,8 @@
 					"width": 335,
 					"height": 18,
 					"dataSource": "rb1",
-					"text": "Cooperative process",
+					"text": ":xliff:HDI2_RB1",
+					"stroke": "automatic",
 					"focusable": false,
 					"radioGroup": "Group1",
 					"events": [
@@ -324,7 +328,8 @@
 					"width": 335,
 					"height": 18,
 					"dataSource": "rb2",
-					"text": "Preemptive process (if running in compiled mode)",
+					"text": ":xliff:HDI2_RB2",
+					"stroke": "automatic",
 					"focusable": false,
 					"radioGroup": "Group1",
 					"events": [
