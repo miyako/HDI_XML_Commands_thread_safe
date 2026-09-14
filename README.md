@@ -1,4 +1,4 @@
-# HDI_Template
+# HDI_XML_Commands_thread_safe
 
 A 4D v16 **HDI** (How Do I) binary database demonstrating "XML commands are now thread safe", converted to a 4D project using 4D 21. The codebase was then updated and cleaned up with the help of **GitHub Copilot**.
 
