@@ -9,9 +9,3 @@ This project started as a binary `.4DB` example database originally distributed 
 - **Blog post:** https://blog.4d.com/xml-commands-are-now-thread-safe/
 
 - **Original download:** https://download.4d.com/Demos/4D_v16/HDI_ThreadSafe_XMLCommands.zip
-
-## Branches
-
-## Copilot Token Usage
-
-## Screenshots
