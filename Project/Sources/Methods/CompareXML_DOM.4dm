@@ -1,21 +1,18 @@
-//%attributes = {}
-C_TEXT:C284($1; $2)
-C_TEXT:C284($domRef1; $domRef2)
-$domRef1:=$1
-$domRef2:=$2
+//%attributes = {"invisible":true}
+#DECLARE($domRef1 : Text; $domRef2 : Text)->$result : Boolean
 
-C_LONGINT:C283($source; $i; $j; $n1; $n2)
-C_LONGINT:C283($nbAttributes1; $nbAttributes2)
+var $source; $i; $j; $n1; $n2 : Integer
+var $nbAttributes1; $nbAttributes2 : Integer
 
-C_BOOLEAN:C305($error)
+var $error : Boolean
 
-C_POINTER:C301($ptrA; $ptrB)
+var $ptrA; $ptrB : Pointer
 
-C_BOOLEAN:C305($c1; $c2)
+var $c1; $c2 : Boolean
 
-C_TEXT:C284($name1; $name2)
-C_TEXT:C284($value1; $value2)
-C_TEXT:C284($text1; $text2)
+var $name1; $name2 : Text
+var $value1; $value2 : Text
+var $text1; $text2 : Text
 
 ARRAY LONGINT:C221($_childTypes1; 0)
 ARRAY TEXT:C222($_nodeRefs1; 0)
@@ -127,4 +124,4 @@ Else
 	$error:=True:C214
 End if 
 
-$0:=Not:C34($error)
+$result:=Not:C34($error)

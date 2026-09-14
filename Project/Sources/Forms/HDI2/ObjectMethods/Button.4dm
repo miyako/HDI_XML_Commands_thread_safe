@@ -1,4 +1,4 @@
-C_LONGINT:C283($nbElement)
+var $nbElement : Integer
 
 
 If (rb1=1)

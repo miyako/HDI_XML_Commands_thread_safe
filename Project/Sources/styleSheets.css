@@ -1,0 +1,23 @@
+/* Cross-platform dark mode rules.
+   Platform-specific Liquid Glass / Fluent UI rules live in
+   styleSheets_mac.css and styleSheets_windows.css. */
+
+.alert-text {
+	stroke: #FF4D00;
+}
+
+@media (prefers-color-scheme: dark) {
+	.alert-text {
+		stroke: #FF8A5C;
+	}
+}
+
+.alert-border {
+	stroke: #FF6347;
+}
+
+@media (prefers-color-scheme: dark) {
+	.alert-border {
+		stroke: #CC4A32;
+	}
+}

@@ -1,6 +1,5 @@
-//%attributes = {}
-C_TEXT:C284($refXML; $1)
-$refXML:=$1
+//%attributes = {"invisible":true}
+#DECLARE($refXML : Text)
 
 $filePath:=Get 4D folder:C485(Current resources folder:K5:16)+"theXmlFile.xml"
 
@@ -13,7 +12,7 @@ If (ok=1)
 	
 Else 
 	// If the xml ref is not correctly read alert the user.
-	TEXT TO DOCUMENT:C1237($filePath; "Error the XML ref hasn't be transmitted.")
+	TEXT TO DOCUMENT:C1237($filePath; Localized string("ErrorXMLRefNotTransmitted"))
 	
 End if 
 

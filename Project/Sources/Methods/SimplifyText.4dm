@@ -1,16 +1,11 @@
-//%attributes = {}
-C_TEXT:C284($1)
+//%attributes = {"invisible":true}
+#DECLARE($text : Text)->$result : Text
 
-C_TEXT:C284($text)
-C_TEXT:C284($result)
-
-C_LONGINT:C283($p)
-C_TEXT:C284($paquet)
+var $p : Integer
+var $paquet : Text
 
 If (Count parameters:C259=0)
 	$text:="   M 120 258.6666666666667   l 80 0   l 0 23.333333333333332   s 0 6 -6 6    l -68 0   s -6 0 -6 -6   l 0 -23.333333333333332   z   "
-Else 
-	$text:=$1
 End if 
 
 
@@ -43,5 +38,3 @@ If ($text#"")
 	$result:=Substring:C12($result; 1; Length:C16($result)-1)
 	
 End if 
-
-$0:=$result

@@ -1,10 +1,7 @@
-//%attributes = {}
-C_TEXT:C284($referenceGraphPath)
-C_LONGINT:C283($n; $nbLoop)
-C_BOOLEAN:C305($test)
-
-$referenceGraphPath:=$1
-$nbLoop:=$2
+//%attributes = {"invisible":true}
+#DECLARE($referenceGraphPath : Text; $nbLoop : Integer)
+var $n : Integer
+var $test : Boolean
 
 For ($n; 1; $nbLoop)
 	$test:=CompareFilesXML_DOM($referenceGraphPath; $referenceGraphPath)

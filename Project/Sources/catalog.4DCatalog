@@ -10,22 +10,6 @@
 		<primary_key field_name="ID" field_uuid="A6E58BB01FF1407482262079B5A1922D"/>
 		<table_extra input_form="Form1" output_form="Output"/>
 	</table>
-	<table name="(Process_Time)" uuid="7D5ADA6416594C4B831E0DA8AF36B138" id="4" hide_in_REST="true" prevent_journaling="true">
-		<field name="Duration" uuid="BDCBE258A67E4F9AB7A5AF6E54EAAEC3" type="4" never_null="true" id="2"/>
-		<field name="ProcessName" uuid="3804857628164419AF8ECAA3B9468186" type="10" limiting_length="255" unique="true" never_null="true" id="5"/>
-		<primary_key field_name="ProcessName" field_uuid="3804857628164419AF8ECAA3B9468186"/>
-		<table_extra trashed="true" input_form="(Input)" output_form="(Form1)"/>
-	</table>
-	<index kind="keywords" unique_keys="true" uuid="4FF061FA2B0B4F5187A3EABBFEBD81D4" type="3">
-		<field_ref uuid="3804857628164419AF8ECAA3B9468186" name="ProcessName">
-			<table_ref uuid="7D5ADA6416594C4B831E0DA8AF36B138" name="(Process_Time)"/>
-		</field_ref>
-	</index>
-	<index kind="regular" unique_keys="true" uuid="923C66C7E9B44A85B21B1D7967A91C98" type="1">
-		<field_ref uuid="3804857628164419AF8ECAA3B9468186" name="ProcessName">
-			<table_ref uuid="7D5ADA6416594C4B831E0DA8AF36B138" name="(Process_Time)"/>
-		</field_ref>
-	</index>
 	<index kind="regular" unique_keys="true" uuid="9F0A7D5AE4AC4E49B1DB241459A71A43" type="7">
 		<field_ref uuid="A6E58BB01FF1407482262079B5A1922D" name="ID">
 			<table_ref uuid="373049FBC27B4679BB600FC556A05850" name="SAMPLES"/>

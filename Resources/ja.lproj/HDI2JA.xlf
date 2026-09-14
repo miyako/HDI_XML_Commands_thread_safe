@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="Project/Sources/Forms/HDI2/form.4DForm" source-language="en" target-language="ja">
+	<body>
+	  <trans-unit id="HDI2_TabPage1" resname="HDI2_TabPage1">
+		<source>Page 1</source>
+		<target>ページ 1</target>
+	  </trans-unit>
+	  <trans-unit id="HDI2_TabPage2" resname="HDI2_TabPage2">
+		<source>Page 2</source>
+		<target>ページ 2</target>
+	  </trans-unit>
+	  <trans-unit id="HDI2_TxtNumberOfWorkers" resname="HDI2_TxtNumberOfWorkers">
+		<source>Number of workers</source>
+		<target>ワーカー数</target>
+	  </trans-unit>
+	  <trans-unit id="HDI2_TxtNumberOfFiles" resname="HDI2_TxtNumberOfFiles">
+		<source>Number of XML files to compare</source>
+		<target>比較するXMLファイル数</target>
+	  </trans-unit>
+	  <trans-unit id="HDI2_TxtNumberOfLoop" resname="HDI2_TxtNumberOfLoop">
+		<source>Number of loop</source>
+		<target>ループ回数</target>
+	  </trans-unit>
+	  <trans-unit id="HDI2_ErrMode" resname="HDI2_ErrMode">
+		<source>Preemptive processes are running only in Compiled mode with 64-bit versions.Please, restart your database in Compiled mode with a 64-bit version.</source>
+		<target>プリエンプティブプロセスは64ビット版のコンパイル済みモードでのみ動作します。64ビット版のコンパイル済みモードでデータベースを再起動してください。</target>
+	  </trans-unit>
+	  <trans-unit id="HDI2_BtnCompareCoop" resname="HDI2_BtnCompareCoop">
+		<source>Compare in cooperative</source>
+		<target>協調モードで比較</target>
+	  </trans-unit>
+	  <trans-unit id="HDI2_BtnComparePreemp" resname="HDI2_BtnComparePreemp">
+		<source>Compare in preemptive</source>
+		<target>プリエンプティブモードで比較</target>
+	  </trans-unit>
+	  <trans-unit id="HDI2_BtnSendRef" resname="HDI2_BtnSendRef">
+		<source>Send a ref to another process</source>
+		<target>参照を別プロセスに送信</target>
+	  </trans-unit>
+	  <trans-unit id="HDI2_RB1" resname="HDI2_RB1">
+		<source>Cooperative process</source>
+		<target>協調プロセス</target>
+	  </trans-unit>
+	  <trans-unit id="HDI2_RB2" resname="HDI2_RB2">
+		<source>Preemptive process (if running in compiled mode)</source>
+		<target>プリエンプティブプロセス（コンパイル済みモードの場合）</target>
+	  </trans-unit>
+	</body>
+  </file>
+</xliff>

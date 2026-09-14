@@ -1,2 +1,2 @@
-//%attributes = {"preemptive":"capable"}
+//%attributes = {"invisible":true,"preemptive":"capable"}
 secondLoop($1; $2)

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="Project/Sources/TableForms/3/Output/form.4DForm" source-language="en" target-language="ja">
+	<body>
+	  <trans-unit id="Output_LabelID" resname="Output_LabelID">
+		<source>ID : </source>
+		<target>ID : </target>
+	  </trans-unit>
+	  <trans-unit id="Output_LabelTitle" resname="Output_LabelTitle">
+		<source>Title : </source>
+		<target>タイトル : </target>
+	  </trans-unit>
+	  <trans-unit id="Output_LabelText" resname="Output_LabelText">
+		<source>Text : </source>
+		<target>テキスト : </target>
+	  </trans-unit>
+	  <trans-unit id="Output_LabelSampleSort" resname="Output_LabelSampleSort">
+		<source>SampleSort : </source>
+		<target>SampleSort : </target>
+	  </trans-unit>
+	</body>
+  </file>
+</xliff>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="Project/Sources/Methods" source-language="en" target-language="en">
+	<body>
+	  <trans-unit id="AlertPreemptiveWarning" resname="AlertPreemptiveWarning">
+		<source>The next line will create an error if you are running in a preemptive process</source>
+		<target>The next line will create an error if you are running in a preemptive process</target>
+	  </trans-unit>
+	  <trans-unit id="ErrorXMLRefNotTransmitted" resname="ErrorXMLRefNotTransmitted">
+		<source>Error the XML ref hasn't be transmitted.</source>
+		<target>Error the XML ref hasn't be transmitted.</target>
+	  </trans-unit>
+	  <trans-unit id="MsgTimeElapsedPrefix" resname="MsgTimeElapsedPrefix">
+		<source>Time elapsed for the comparison </source>
+		<target>Time elapsed for the comparison </target>
+	  </trans-unit>
+	  <trans-unit id="MsgTimeElapsedSuffix" resname="MsgTimeElapsedSuffix">
+		<source> milliseconds.</source>
+		<target> milliseconds.</target>
+	  </trans-unit>
+	</body>
+  </file>
+</xliff>

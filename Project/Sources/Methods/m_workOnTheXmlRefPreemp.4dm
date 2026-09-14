@@ -1,11 +1,10 @@
-//%attributes = {"preemptive":"capable"}
-C_TEXT:C284($refXML; $1)
-$refXML:=$1
+//%attributes = {"invisible":true,"preemptive":"capable"}
+#DECLARE($refXML : Text)
 
 $filePath:=Get 4D folder:C485(Current resources folder:K5:16)+"theXmlFile.xml"
 
 //Alert on the arriving error ;). 
-ALERT:C41("The next line will create an error if you are running in a preemptive process")
+ALERT:C41(Localized string("AlertPreemptiveWarning"))
 //We try to retrieve the XML transmitted as a parameter.
 $ref1:=DOM Create XML element:C865($refXML; "CreatedFromWorker")
 If (ok=1)
@@ -15,7 +14,7 @@ If (ok=1)
 	
 Else 
 	// If the xml ref is not correctly read alert the user.
-	TEXT TO DOCUMENT:C1237($filePath; "Error the XML ref hasn't be transmitted.")
+	TEXT TO DOCUMENT:C1237($filePath; Localized string("ErrorXMLRefNotTransmitted"))
 	
 End if 
 
