@@ -1,0 +1,376 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" id="ID_svg" viewBox="0 0 1538 466" viewport-fill="darkblue" viewport-fill-opacity="0.25" xmlns:exsl4D="http://www.4D.com" xmlns:gFunc="http://gFunc" xmlns:math="http://exslt.org/math" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!--gradient styles-->
+
+  <defs>
+    <filter id="soft_blur">
+      <feGaussianBlur in="SourceGraphic" result="BlurAlpha" stdDeviation="1"/>
+    </filter>
+    <filter id="pastel">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="2"/>
+      <feOffset dx="6" dy="6" in="blur" result="offsetBlur"/>
+      <feComposite in="SourceGraphic" in2="offsetBlur" operator="in" result="specOut"/>
+    </filter>
+    <filter id="blur_shadow">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="3"/>
+      <feOffset dx="4" dy="2" in="blur" result="offsetBlur"/>
+      <feBlend in="SourceGraphic" in2="offsetBlur" mode="normal"/>
+    </filter>
+    <filter filterUnits="objectBoundingBox" id="Shadow">
+      <feGaussianBlur in="SourceAlpha" result="flou" stdDeviation="0"/>
+      <feColorMatrix in="SourceAlpha" result="flouBlue" type="matrix" values=" 0 0 0 0 0                      0 0 0 0 0                     0 0 0 0 0                      0 0 0 0.3 0"/>
+      <feOffset dx="4" dy="4" in="flouBlue" result="flouDecalage"/>
+      <feBlend in="SourceGraphic" in2="flouDecalage" mode="normal"/>
+    </filter>
+    <filter filterUnits="objectBoundingBox" height="100%" id="SaturateMinus" width="100%" x="0%" y="0%">
+      <feColorMatrix in="SourceGraphic" type="saturate" values="0.5"/>
+    </filter>
+    <filter filterUnits="objectBoundingBox" height="100%" id="SaturatePlus" width="100%" x="0%" y="0%">
+      <feColorMatrix in="SourceGraphic" type="saturate" values="1.4"/>
+    </filter>
+    <linearGradient id="BlackGradient">
+      <stop offset="0%" style="stop-color:rgb(0,0,0); stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:rgb(0,0,0); stop-opacity:0.1"/>
+    </linearGradient>
+    <linearGradient id="WhiteGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(255,255,255); stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="WhiteBlackGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(255,255,255); stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:0.15"/>
+    </linearGradient>
+    <linearGradient id="Black0Black1Gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(0,0,0); stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!--global stroke and font styles-->
+
+  <g id="ID_globals" style="fill:red;stroke:none;font-family:Arial;font-size:14px;font-weight:normal;font-style:normal;text-decoration:none;shape-rendering:crispEdges">
+    <!--draw title-->
+    <!--********************************draw graph background********************************-->
+    <rect fill="darkgreen" height="400" id="ID_background_shadow" opacity="0.5" rx="10" ry="10" stroke="none" transform="translate(1,1)" visibility="visible" width="1280" x="53" y="20"/>
+    <g fill="lightgreen" id="ID_background" opacity="0.5" stroke="none" visibility="visible">
+      <rect height="400" rx="10" ry="10" stroke="none" width="1280" x="53" y="20"/>
+      <rect fill="url(#Black0Black1Gradient)" height="400" rx="10" ry="10" stroke="none" width="1280" x="53" y="20"/>
+    </g>
+    <clipPath id="ID_backgroundClipPath">
+      <rect height="401" rx="10" ry="10" width="1281" x="52" y="19"/>
+    </clipPath>
+    <!--********************************draw Y Labels********************************-->
+    <g id="ID_y$value" style="fill:red;stroke:none;font-family:Arial;font-size:14px;font-weight:normal;font-style:normal;text-decoration:none;filter:none" visibility="visible">
+      <text text-anchor="end" x="41" y="27">14</text>
+      <text text-anchor="end" x="41" y="57.77">12</text>
+      <text text-anchor="end" x="41" y="88.54">10</text>
+      <text text-anchor="end" x="41" y="119.31">8</text>
+      <text text-anchor="end" x="41" y="150.08">6</text>
+      <text text-anchor="end" x="41" y="180.85">4</text>
+      <text text-anchor="end" x="41" y="211.62">2</text>
+      <text text-anchor="end" x="41" y="242.39">0</text>
+      <text text-anchor="end" x="41" y="273.16">-2</text>
+      <text text-anchor="end" x="41" y="303.93">-4</text>
+      <text text-anchor="end" x="41" y="334.7">-6</text>
+      <text text-anchor="end" x="41" y="365.47">-8</text>
+      <text text-anchor="end" x="41" y="396.24">-10</text>
+      <text text-anchor="end" x="41" y="427.01">-12</text>
+    </g>
+    <!--********************************draw X Labels********************************-->
+    <!--draw axis x labels-->
+    <g id="ID_x$value" style="fill:red;stroke:none;font-family:Arial;font-size:14px;font-weight:normal;font-style:normal;text-decoration:none;filter:none" visibility="visible">
+      <text text-anchor="middle" x="133" y="446">08:00:00</text>
+      <text text-anchor="middle" x="293" y="446">09:00:00</text>
+      <text text-anchor="middle" x="453" y="446">10:00:00</text>
+      <text text-anchor="middle" x="613" y="446">11:00:00</text>
+      <text text-anchor="middle" x="773" y="446">11:15:00</text>
+      <text text-anchor="middle" x="933" y="446">14:45:00</text>
+      <text text-anchor="middle" x="1093" y="446">15:00:00</text>
+      <text text-anchor="middle" x="1253" y="446">16:00:00</text>
+    </g>
+    <g style="clip-path: url(#ID_backgroundClipPath)">
+      <!--******************************** draw Y grid lines******************************** (Horizontal lines)-->
+      <g id="ID_y_grid" stroke="#a8a8a8" stroke-width="1">
+        <line x1="53" x2="1333" y1="50.77" y2="50.77"/>
+        <line x1="53" x2="1333" y1="81.54" y2="81.54"/>
+        <line x1="53" x2="1333" y1="112.31" y2="112.31"/>
+        <line x1="53" x2="1333" y1="143.08" y2="143.08"/>
+        <line x1="53" x2="1333" y1="173.85" y2="173.85"/>
+        <line x1="53" x2="1333" y1="204.62" y2="204.62"/>
+        <line x1="53" x2="1333" y1="235.39" y2="235.39"/>
+        <line x1="53" x2="1333" y1="266.16" y2="266.16"/>
+        <line x1="53" x2="1333" y1="296.93" y2="296.93"/>
+        <line x1="53" x2="1333" y1="327.7" y2="327.7"/>
+        <line x1="53" x2="1333" y1="358.47" y2="358.47"/>
+        <line x1="53" x2="1333" y1="389.24" y2="389.24"/>
+      </g>
+      <!--draw Y grid lines SHADOWS-->
+      <g id="ID_y_grid_shadow" stroke="#ffffff" stroke-width="1">
+        <line transform="translate(0,1)" x1="53" x2="1333" y1="50.77" y2="50.77"/>
+        <line transform="translate(0,1)" x1="53" x2="1333" y1="81.54" y2="81.54"/>
+        <line transform="translate(0,1)" x1="53" x2="1333" y1="112.31" y2="112.31"/>
+        <line transform="translate(0,1)" x1="53" x2="1333" y1="143.08" y2="143.08"/>
+        <line transform="translate(0,1)" x1="53" x2="1333" y1="173.85" y2="173.85"/>
+        <line transform="translate(0,1)" x1="53" x2="1333" y1="204.62" y2="204.62"/>
+        <line transform="translate(0,1)" x1="53" x2="1333" y1="235.39" y2="235.39"/>
+        <line transform="translate(0,1)" x1="53" x2="1333" y1="266.16" y2="266.16"/>
+        <line transform="translate(0,1)" x1="53" x2="1333" y1="296.93" y2="296.93"/>
+        <line transform="translate(0,1)" x1="53" x2="1333" y1="327.7" y2="327.7"/>
+        <line transform="translate(0,1)" x1="53" x2="1333" y1="358.47" y2="358.47"/>
+        <line transform="translate(0,1)" x1="53" x2="1333" y1="389.24" y2="389.24"/>
+      </g>
+      <g id="ID_y0_axis" stroke="rgb(100,100,100)" stroke-width="1" visibility="visible">
+        <line x1="53" x2="1333" y1="235.38" y2="235.38"/>
+      </g>
+      <!--********************************draw X grid lines******************************** (Vertical lines)-->
+      <g id="ID_x_grid" stroke="#a8a8a8" stroke-width="1">
+        <line x1="213" x2="213" y1="20" y2="420"/>
+        <line x1="373" x2="373" y1="20" y2="420"/>
+        <line x1="533" x2="533" y1="20" y2="420"/>
+        <line x1="693" x2="693" y1="20" y2="420"/>
+        <line x1="853" x2="853" y1="20" y2="420"/>
+        <line x1="1013" x2="1013" y1="20" y2="420"/>
+        <line x1="1173" x2="1173" y1="20" y2="420"/>
+        <line x1="1333" x2="1333" y1="20" y2="420"/>
+      </g>
+      <!--draw X grid lines SHADOWS -->
+      <g id="ID_x_grid_shadow" stroke="#ffffff" stroke-width="1">
+        <line transform="translate(1,0)" x1="213" x2="213" y1="20" y2="420"/>
+        <line transform="translate(1,0)" x1="373" x2="373" y1="20" y2="420"/>
+        <line transform="translate(1,0)" x1="533" x2="533" y1="20" y2="420"/>
+        <line transform="translate(1,0)" x1="693" x2="693" y1="20" y2="420"/>
+        <line transform="translate(1,0)" x1="853" x2="853" y1="20" y2="420"/>
+        <line transform="translate(1,0)" x1="1013" x2="1013" y1="20" y2="420"/>
+        <line transform="translate(1,0)" x1="1173" x2="1173" y1="20" y2="420"/>
+        <line transform="translate(1,0)" x1="1333" x2="1333" y1="20" y2="420"/>
+      </g>
+    </g>
+    <!--******************************** draw legend ***********************************-->
+    <g filter="none" id="ID_legend" transform="translate(1345,20)" visibility="visible">
+      <!--draw legend border-->
+      <rect fill="darkgreen" fill-opacity="0.5" height="108" id="ID_legend_border_shadow" rx="10" ry="10" stroke="none" transform="translate(1,1)" width="173" x="0" y="0"/>
+      <rect fill="lightgreen" fill-opacity="0.5" height="108" id="ID_legend_border" rx="10" ry="10" stroke="none" stroke-width="0" width="173" x="0" y="0"/>
+      <!--draw legend bullets-->
+      <g id="ID_legend_bullets" stroke="none">
+        <g fill="purple" id="ID_legend_1">
+          <rect height="12" rx="3" ry="3" width="24" x="10" y="8"/>
+          <rect fill="url(#WhiteBlackGradient)" height="12" rx="3" ry="3" width="24" x="10" y="8"/>
+          <rect fill-opacity="0.3" filter="url(#SaturateMinus)" height="12" rx="3" ry="3" width="24" x="10" y="8"/>
+        </g>
+        <g fill="darkblue" id="ID_legend_2">
+          <rect height="12" rx="3" ry="3" width="24" x="10" y="28"/>
+          <rect fill="url(#WhiteBlackGradient)" height="12" rx="3" ry="3" width="24" x="10" y="28"/>
+          <rect fill-opacity="0.3" filter="url(#SaturateMinus)" height="12" rx="3" ry="3" width="24" x="10" y="28"/>
+        </g>
+        <g fill="blue" id="ID_legend_3">
+          <rect height="12" rx="3" ry="3" width="24" x="10" y="48"/>
+          <rect fill="url(#WhiteBlackGradient)" height="12" rx="3" ry="3" width="24" x="10" y="48"/>
+          <rect fill-opacity="0.3" filter="url(#SaturateMinus)" height="12" rx="3" ry="3" width="24" x="10" y="48"/>
+        </g>
+        <g fill="green" id="ID_legend_4">
+          <rect height="12" rx="3" ry="3" width="24" x="10" y="68"/>
+          <rect fill="url(#WhiteBlackGradient)" height="12" rx="3" ry="3" width="24" x="10" y="68"/>
+          <rect fill-opacity="0.3" filter="url(#SaturateMinus)" height="12" rx="3" ry="3" width="24" x="10" y="68"/>
+        </g>
+        <g fill="yellow" id="ID_legend_5">
+          <rect height="12" rx="3" ry="3" width="24" x="10" y="88"/>
+          <rect fill="url(#WhiteBlackGradient)" height="12" rx="3" ry="3" width="24" x="10" y="88"/>
+          <rect fill-opacity="0.3" filter="url(#SaturateMinus)" height="12" rx="3" ry="3" width="24" x="10" y="88"/>
+        </g>
+      </g>
+      <!--draw legend labels-->
+      <g id="ID_legend_labels" style="fill:black;stroke:none;font-family:Arial;;font-weight:normal;font-style:normal;text-decoration:none;filter:none;text-anchor:start">
+        <text x="44" y="17">Sharp</text>
+        <text x="44" y="37">Infinity</text>
+        <text x="44" y="57">Audio Référence</text>
+        <text x="44" y="77">Triangle</text>
+        <text x="44" y="97">Yamaha</text>
+      </g>
+    </g>
+    <!-- exemple de path "M 0 0 l 0 -198 s 0,-6,6,-6 l 12 0 s 6,0,6,6 l 0 198 z" -->
+    <g style="clip-path: url(#ID_backgroundClipPath)">
+      <g fill="black" fill-opacity="0.2" id="ID_graph_shadow_1">
+        <path d="M 0 0 l 0 9.38 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -9.38 z" transform="translate(66,235.38)"/>
+        <path d="M 0 0 l 0 -24.77 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 24.77 z" transform="translate(226,235.38)"/>
+        <path d="M 0 0 l 0 40.15 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -40.15 z" transform="translate(386,235.38)"/>
+        <path d="M 0 0 l 0 -55.54 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 55.54 z" transform="translate(546,235.38)"/>
+        <path d="M 0 0 l 0 70.92 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -70.92 z" transform="translate(706,235.38)"/>
+        <path d="M 0 0 l 0 -86.31 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 86.31 z" transform="translate(866,235.38)"/>
+        <path d="M 0 0 l 0 101.69 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -101.69 z" transform="translate(1026,235.38)"/>
+        <path d="M 0 0 l 0 -117.08 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 117.08 z" transform="translate(1186,235.38)"/>
+      </g>
+      <g fill="black" fill-opacity="0.2" id="ID_graph_shadow_2">
+        <path d="M 0 0 l 0 10.92 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -10.92 z" transform="translate(96,235.38)"/>
+        <path d="M 0 0 l 0 -27.85 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 27.85 z" transform="translate(256,235.38)"/>
+        <path d="M 0 0 l 0 44.77 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -44.77 z" transform="translate(416,235.38)"/>
+        <path d="M 0 0 l 0 -61.69 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 61.69 z" transform="translate(576,235.38)"/>
+        <path d="M 0 0 l 0 78.62 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -78.62 z" transform="translate(736,235.38)"/>
+        <path d="M 0 0 l 0 -95.54 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 95.54 z" transform="translate(896,235.38)"/>
+        <path d="M 0 0 l 0 112.46 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -112.46 z" transform="translate(1056,235.38)"/>
+        <path d="M 0 0 l 0 -129.38 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 129.38 z" transform="translate(1216,235.38)"/>
+      </g>
+      <g fill="black" fill-opacity="0.2" id="ID_graph_shadow_3">
+        <path d="M 0 0 l 0 12.62 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -12.62 z" transform="translate(126,235.38)"/>
+        <path d="M 0 0 l 0 -31.23 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 31.23 z" transform="translate(286,235.38)"/>
+        <path d="M 0 0 l 0 49.85 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -49.85 z" transform="translate(446,235.38)"/>
+        <path d="M 0 0 l 0 -68.46 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 68.46 z" transform="translate(606,235.38)"/>
+        <path d="M 0 0 l 0 87.08 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -87.08 z" transform="translate(766,235.38)"/>
+        <path d="M 0 0 l 0 -105.69 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 105.69 z" transform="translate(926,235.38)"/>
+        <path d="M 0 0 l 0 124.31 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -124.31 z" transform="translate(1086,235.38)"/>
+        <path d="M 0 0 l 0 -142.92 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 142.92 z" transform="translate(1246,235.38)"/>
+      </g>
+      <g fill="black" fill-opacity="0.2" id="ID_graph_shadow_4">
+        <path d="M 0 0 l 0 14.48 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -14.48 z" transform="translate(156,235.38)"/>
+        <path d="M 0 0 l 0 -34.95 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 34.95 z" transform="translate(316,235.38)"/>
+        <path d="M 0 0 l 0 55.43 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -55.43 z" transform="translate(476,235.38)"/>
+        <path d="M 0 0 l 0 -75.91 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 75.91 z" transform="translate(636,235.38)"/>
+        <path d="M 0 0 l 0 96.38 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -96.38 z" transform="translate(796,235.38)"/>
+        <path d="M 0 0 l 0 -116.86 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 116.86 z" transform="translate(956,235.38)"/>
+        <path d="M 0 0 l 0 137.34 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -137.34 z" transform="translate(1116,235.38)"/>
+        <path d="M 0 0 l 0 -157.82 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 157.82 z" transform="translate(1276,235.38)"/>
+      </g>
+      <g fill="black" fill-opacity="0.2" id="ID_graph_shadow_5">
+        <path d="M 0 0 l 0 16.52 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -16.52 z" transform="translate(186,235.38)"/>
+        <path d="M 0 0 l 0 -39.05 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 39.05 z" transform="translate(346,235.38)"/>
+        <path d="M 0 0 l 0 61.57 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -61.57 z" transform="translate(506,235.38)"/>
+        <path d="M 0 0 l 0 -84.1 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 84.1 z" transform="translate(666,235.38)"/>
+        <path d="M 0 0 l 0 106.62 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -106.62 z" transform="translate(826,235.38)"/>
+        <path d="M 0 0 l 0 -129.15 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 129.15 z" transform="translate(986,235.38)"/>
+        <path d="M 0 0 l 0 151.67 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -151.67 z" transform="translate(1146,235.38)"/>
+        <path d="M 0 0 l 0 -174.2 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 174.2 z" transform="translate(1306,235.38)"/>
+      </g>
+      <g fill="purple" filter="none" id="ID_graph_1" opacity="1" stroke="none" stroke-opacity="1" stroke-width="0">
+        <path d="M 0 0 l 0 9.38 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -9.38 z" transform="translate(63,235.38)"/>
+        <path d="M 0 0 l 0 9.38 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -9.38 z" fill="url(#WhiteBlackGradient)" transform="translate(63,235.38)"/>
+        <path d="M 0 0 l 0 9.38 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -9.38 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(63,235.38)"/>
+        <path d="M 0 0 l 0 -24.77 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 24.77 z" transform="translate(223,235.38)"/>
+        <path d="M 0 0 l 0 -24.77 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 24.77 z" fill="url(#WhiteBlackGradient)" transform="translate(223,235.38)"/>
+        <path d="M 0 0 l 0 -24.77 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 24.77 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(223,235.38)"/>
+        <path d="M 0 0 l 0 40.15 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -40.15 z" transform="translate(383,235.38)"/>
+        <path d="M 0 0 l 0 40.15 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -40.15 z" fill="url(#WhiteBlackGradient)" transform="translate(383,235.38)"/>
+        <path d="M 0 0 l 0 40.15 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -40.15 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(383,235.38)"/>
+        <path d="M 0 0 l 0 -55.54 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 55.54 z" transform="translate(543,235.38)"/>
+        <path d="M 0 0 l 0 -55.54 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 55.54 z" fill="url(#WhiteBlackGradient)" transform="translate(543,235.38)"/>
+        <path d="M 0 0 l 0 -55.54 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 55.54 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(543,235.38)"/>
+        <path d="M 0 0 l 0 70.92 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -70.92 z" transform="translate(703,235.38)"/>
+        <path d="M 0 0 l 0 70.92 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -70.92 z" fill="url(#WhiteBlackGradient)" transform="translate(703,235.38)"/>
+        <path d="M 0 0 l 0 70.92 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -70.92 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(703,235.38)"/>
+        <path d="M 0 0 l 0 -86.31 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 86.31 z" transform="translate(863,235.38)"/>
+        <path d="M 0 0 l 0 -86.31 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 86.31 z" fill="url(#WhiteBlackGradient)" transform="translate(863,235.38)"/>
+        <path d="M 0 0 l 0 -86.31 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 86.31 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(863,235.38)"/>
+        <path d="M 0 0 l 0 101.69 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -101.69 z" transform="translate(1023,235.38)"/>
+        <path d="M 0 0 l 0 101.69 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -101.69 z" fill="url(#WhiteBlackGradient)" transform="translate(1023,235.38)"/>
+        <path d="M 0 0 l 0 101.69 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -101.69 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(1023,235.38)"/>
+        <path d="M 0 0 l 0 -117.08 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 117.08 z" transform="translate(1183,235.38)"/>
+        <path d="M 0 0 l 0 -117.08 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 117.08 z" fill="url(#WhiteBlackGradient)" transform="translate(1183,235.38)"/>
+        <path d="M 0 0 l 0 -117.08 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 117.08 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(1183,235.38)"/>
+      </g>
+      <g fill="darkblue" filter="none" id="ID_graph_2" opacity="1" stroke="none" stroke-opacity="1" stroke-width="0">
+        <path d="M 0 0 l 0 10.92 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -10.92 z" transform="translate(93,235.38)"/>
+        <path d="M 0 0 l 0 10.92 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -10.92 z" fill="url(#WhiteBlackGradient)" transform="translate(93,235.38)"/>
+        <path d="M 0 0 l 0 10.92 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -10.92 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(93,235.38)"/>
+        <path d="M 0 0 l 0 -27.85 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 27.85 z" transform="translate(253,235.38)"/>
+        <path d="M 0 0 l 0 -27.85 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 27.85 z" fill="url(#WhiteBlackGradient)" transform="translate(253,235.38)"/>
+        <path d="M 0 0 l 0 -27.85 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 27.85 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(253,235.38)"/>
+        <path d="M 0 0 l 0 44.77 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -44.77 z" transform="translate(413,235.38)"/>
+        <path d="M 0 0 l 0 44.77 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -44.77 z" fill="url(#WhiteBlackGradient)" transform="translate(413,235.38)"/>
+        <path d="M 0 0 l 0 44.77 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -44.77 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(413,235.38)"/>
+        <path d="M 0 0 l 0 -61.69 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 61.69 z" transform="translate(573,235.38)"/>
+        <path d="M 0 0 l 0 -61.69 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 61.69 z" fill="url(#WhiteBlackGradient)" transform="translate(573,235.38)"/>
+        <path d="M 0 0 l 0 -61.69 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 61.69 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(573,235.38)"/>
+        <path d="M 0 0 l 0 78.62 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -78.62 z" transform="translate(733,235.38)"/>
+        <path d="M 0 0 l 0 78.62 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -78.62 z" fill="url(#WhiteBlackGradient)" transform="translate(733,235.38)"/>
+        <path d="M 0 0 l 0 78.62 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -78.62 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(733,235.38)"/>
+        <path d="M 0 0 l 0 -95.54 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 95.54 z" transform="translate(893,235.38)"/>
+        <path d="M 0 0 l 0 -95.54 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 95.54 z" fill="url(#WhiteBlackGradient)" transform="translate(893,235.38)"/>
+        <path d="M 0 0 l 0 -95.54 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 95.54 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(893,235.38)"/>
+        <path d="M 0 0 l 0 112.46 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -112.46 z" transform="translate(1053,235.38)"/>
+        <path d="M 0 0 l 0 112.46 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -112.46 z" fill="url(#WhiteBlackGradient)" transform="translate(1053,235.38)"/>
+        <path d="M 0 0 l 0 112.46 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -112.46 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(1053,235.38)"/>
+        <path d="M 0 0 l 0 -129.38 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 129.38 z" transform="translate(1213,235.38)"/>
+        <path d="M 0 0 l 0 -129.38 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 129.38 z" fill="url(#WhiteBlackGradient)" transform="translate(1213,235.38)"/>
+        <path d="M 0 0 l 0 -129.38 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 129.38 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(1213,235.38)"/>
+      </g>
+      <g fill="blue" filter="none" id="ID_graph_3" opacity="1" stroke="none" stroke-opacity="1" stroke-width="0">
+        <path d="M 0 0 l 0 12.62 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -12.62 z" transform="translate(123,235.38)"/>
+        <path d="M 0 0 l 0 12.62 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -12.62 z" fill="url(#WhiteBlackGradient)" transform="translate(123,235.38)"/>
+        <path d="M 0 0 l 0 12.62 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -12.62 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(123,235.38)"/>
+        <path d="M 0 0 l 0 -31.23 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 31.23 z" transform="translate(283,235.38)"/>
+        <path d="M 0 0 l 0 -31.23 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 31.23 z" fill="url(#WhiteBlackGradient)" transform="translate(283,235.38)"/>
+        <path d="M 0 0 l 0 -31.23 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 31.23 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(283,235.38)"/>
+        <path d="M 0 0 l 0 49.85 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -49.85 z" transform="translate(443,235.38)"/>
+        <path d="M 0 0 l 0 49.85 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -49.85 z" fill="url(#WhiteBlackGradient)" transform="translate(443,235.38)"/>
+        <path d="M 0 0 l 0 49.85 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -49.85 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(443,235.38)"/>
+        <path d="M 0 0 l 0 -68.46 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 68.46 z" transform="translate(603,235.38)"/>
+        <path d="M 0 0 l 0 -68.46 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 68.46 z" fill="url(#WhiteBlackGradient)" transform="translate(603,235.38)"/>
+        <path d="M 0 0 l 0 -68.46 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 68.46 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(603,235.38)"/>
+        <path d="M 0 0 l 0 87.08 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -87.08 z" transform="translate(763,235.38)"/>
+        <path d="M 0 0 l 0 87.08 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -87.08 z" fill="url(#WhiteBlackGradient)" transform="translate(763,235.38)"/>
+        <path d="M 0 0 l 0 87.08 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -87.08 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(763,235.38)"/>
+        <path d="M 0 0 l 0 -105.69 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 105.69 z" transform="translate(923,235.38)"/>
+        <path d="M 0 0 l 0 -105.69 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 105.69 z" fill="url(#WhiteBlackGradient)" transform="translate(923,235.38)"/>
+        <path d="M 0 0 l 0 -105.69 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 105.69 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(923,235.38)"/>
+        <path d="M 0 0 l 0 124.31 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -124.31 z" transform="translate(1083,235.38)"/>
+        <path d="M 0 0 l 0 124.31 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -124.31 z" fill="url(#WhiteBlackGradient)" transform="translate(1083,235.38)"/>
+        <path d="M 0 0 l 0 124.31 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -124.31 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(1083,235.38)"/>
+        <path d="M 0 0 l 0 -142.92 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 142.92 z" transform="translate(1243,235.38)"/>
+        <path d="M 0 0 l 0 -142.92 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 142.92 z" fill="url(#WhiteBlackGradient)" transform="translate(1243,235.38)"/>
+        <path d="M 0 0 l 0 -142.92 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 142.92 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(1243,235.38)"/>
+      </g>
+      <g fill="green" filter="none" id="ID_graph_4" opacity="1" stroke="none" stroke-opacity="1" stroke-width="0">
+        <path d="M 0 0 l 0 14.48 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -14.48 z" transform="translate(153,235.38)"/>
+        <path d="M 0 0 l 0 14.48 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -14.48 z" fill="url(#WhiteBlackGradient)" transform="translate(153,235.38)"/>
+        <path d="M 0 0 l 0 14.48 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -14.48 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(153,235.38)"/>
+        <path d="M 0 0 l 0 -34.95 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 34.95 z" transform="translate(313,235.38)"/>
+        <path d="M 0 0 l 0 -34.95 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 34.95 z" fill="url(#WhiteBlackGradient)" transform="translate(313,235.38)"/>
+        <path d="M 0 0 l 0 -34.95 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 34.95 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(313,235.38)"/>
+        <path d="M 0 0 l 0 55.43 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -55.43 z" transform="translate(473,235.38)"/>
+        <path d="M 0 0 l 0 55.43 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -55.43 z" fill="url(#WhiteBlackGradient)" transform="translate(473,235.38)"/>
+        <path d="M 0 0 l 0 55.43 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -55.43 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(473,235.38)"/>
+        <path d="M 0 0 l 0 -75.91 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 75.91 z" transform="translate(633,235.38)"/>
+        <path d="M 0 0 l 0 -75.91 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 75.91 z" fill="url(#WhiteBlackGradient)" transform="translate(633,235.38)"/>
+        <path d="M 0 0 l 0 -75.91 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 75.91 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(633,235.38)"/>
+        <path d="M 0 0 l 0 96.38 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -96.38 z" transform="translate(793,235.38)"/>
+        <path d="M 0 0 l 0 96.38 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -96.38 z" fill="url(#WhiteBlackGradient)" transform="translate(793,235.38)"/>
+        <path d="M 0 0 l 0 96.38 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -96.38 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(793,235.38)"/>
+        <path d="M 0 0 l 0 -116.86 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 116.86 z" transform="translate(953,235.38)"/>
+        <path d="M 0 0 l 0 -116.86 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 116.86 z" fill="url(#WhiteBlackGradient)" transform="translate(953,235.38)"/>
+        <path d="M 0 0 l 0 -116.86 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 116.86 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(953,235.38)"/>
+        <path d="M 0 0 l 0 137.34 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -137.34 z" transform="translate(1113,235.38)"/>
+        <path d="M 0 0 l 0 137.34 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -137.34 z" fill="url(#WhiteBlackGradient)" transform="translate(1113,235.38)"/>
+        <path d="M 0 0 l 0 137.34 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -137.34 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(1113,235.38)"/>
+        <path d="M 0 0 l 0 -157.82 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 157.82 z" transform="translate(1273,235.38)"/>
+        <path d="M 0 0 l 0 -157.82 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 157.82 z" fill="url(#WhiteBlackGradient)" transform="translate(1273,235.38)"/>
+        <path d="M 0 0 l 0 -157.82 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 157.82 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(1273,235.38)"/>
+      </g>
+      <g fill="yellow" filter="none" id="ID_graph_5" opacity="1" stroke="none" stroke-opacity="1" stroke-width="0">
+        <path d="M 0 0 l 0 16.52 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -16.52 z" transform="translate(183,235.38)"/>
+        <path d="M 0 0 l 0 16.52 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -16.52 z" fill="url(#WhiteBlackGradient)" transform="translate(183,235.38)"/>
+        <path d="M 0 0 l 0 16.52 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -16.52 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(183,235.38)"/>
+        <path d="M 0 0 l 0 -39.05 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 39.05 z" transform="translate(343,235.38)"/>
+        <path d="M 0 0 l 0 -39.05 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 39.05 z" fill="url(#WhiteBlackGradient)" transform="translate(343,235.38)"/>
+        <path d="M 0 0 l 0 -39.05 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 39.05 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(343,235.38)"/>
+        <path d="M 0 0 l 0 61.57 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -61.57 z" transform="translate(503,235.38)"/>
+        <path d="M 0 0 l 0 61.57 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -61.57 z" fill="url(#WhiteBlackGradient)" transform="translate(503,235.38)"/>
+        <path d="M 0 0 l 0 61.57 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -61.57 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(503,235.38)"/>
+        <path d="M 0 0 l 0 -84.1 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 84.1 z" transform="translate(663,235.38)"/>
+        <path d="M 0 0 l 0 -84.1 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 84.1 z" fill="url(#WhiteBlackGradient)" transform="translate(663,235.38)"/>
+        <path d="M 0 0 l 0 -84.1 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 84.1 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(663,235.38)"/>
+        <path d="M 0 0 l 0 106.62 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -106.62 z" transform="translate(823,235.38)"/>
+        <path d="M 0 0 l 0 106.62 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -106.62 z" fill="url(#WhiteBlackGradient)" transform="translate(823,235.38)"/>
+        <path d="M 0 0 l 0 106.62 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -106.62 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(823,235.38)"/>
+        <path d="M 0 0 l 0 -129.15 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 129.15 z" transform="translate(983,235.38)"/>
+        <path d="M 0 0 l 0 -129.15 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 129.15 z" fill="url(#WhiteBlackGradient)" transform="translate(983,235.38)"/>
+        <path d="M 0 0 l 0 -129.15 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 129.15 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(983,235.38)"/>
+        <path d="M 0 0 l 0 151.67 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -151.67 z" transform="translate(1143,235.38)"/>
+        <path d="M 0 0 l 0 151.67 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -151.67 z" fill="url(#WhiteBlackGradient)" transform="translate(1143,235.38)"/>
+        <path d="M 0 0 l 0 151.67 s 0 6 6 6 l 8 0 s 6 0 6 -6 l 0 -151.67 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(1143,235.38)"/>
+        <path d="M 0 0 l 0 -174.2 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 174.2 z" transform="translate(1303,235.38)"/>
+        <path d="M 0 0 l 0 -174.2 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 174.2 z" fill="url(#WhiteBlackGradient)" transform="translate(1303,235.38)"/>
+        <path d="M 0 0 l 0 -174.2 s 0 -6 6 -6 l 8 0 s 6 0 6 6 l 0 174.2 z" fill-opacity="0.3" filter="url(#SaturateMinus)" transform="translate(1303,235.38)"/>
+      </g>
+    </g>
+  </g>
+
+</svg>

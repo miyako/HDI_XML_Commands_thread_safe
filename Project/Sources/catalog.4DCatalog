@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="HDI_XML_Commands_thread_safe" uuid="89D3E6F80FA9EA408A0E251A8569EC50" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="SAMPLES" uuid="373049FBC27B4679BB600FC556A05850" id="3">
+		<field name="ID" uuid="A6E58BB01FF1407482262079B5A1922D" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Title" uuid="35C07DCBFEBB4747A3C229B95F85D5EE" type="10" never_null="true" id="2"/>
+		<field name="Text" uuid="4C4CE189E738499B84F53F34B61CF199" type="10" never_null="true" id="3"/>
+		<field name="SampleSort" uuid="DF812DB0BB6B4CCB83F420E40DA14116" type="4" never_null="true" id="4"/>
+		<primary_key field_name="ID" field_uuid="A6E58BB01FF1407482262079B5A1922D"/>
+		<table_extra input_form="Form1" output_form="Output"/>
+	</table>
+	<table name="(Process_Time)" uuid="7D5ADA6416594C4B831E0DA8AF36B138" id="4" hide_in_REST="true" prevent_journaling="true">
+		<field name="Duration" uuid="BDCBE258A67E4F9AB7A5AF6E54EAAEC3" type="4" never_null="true" id="2"/>
+		<field name="ProcessName" uuid="3804857628164419AF8ECAA3B9468186" type="10" limiting_length="255" unique="true" never_null="true" id="5"/>
+		<primary_key field_name="ProcessName" field_uuid="3804857628164419AF8ECAA3B9468186"/>
+		<table_extra trashed="true" input_form="(Input)" output_form="(Form1)"/>
+	</table>
+	<index kind="keywords" unique_keys="true" uuid="4FF061FA2B0B4F5187A3EABBFEBD81D4" type="3">
+		<field_ref uuid="3804857628164419AF8ECAA3B9468186" name="ProcessName">
+			<table_ref uuid="7D5ADA6416594C4B831E0DA8AF36B138" name="(Process_Time)"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="923C66C7E9B44A85B21B1D7967A91C98" type="1">
+		<field_ref uuid="3804857628164419AF8ECAA3B9468186" name="ProcessName">
+			<table_ref uuid="7D5ADA6416594C4B831E0DA8AF36B138" name="(Process_Time)"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="9F0A7D5AE4AC4E49B1DB241459A71A43" type="7">
+		<field_ref uuid="A6E58BB01FF1407482262079B5A1922D" name="ID">
+			<table_ref uuid="373049FBC27B4679BB600FC556A05850" name="SAMPLES"/>
+		</field_ref>
+	</index>
+	<base_extra data_file_path=":HowDoI.4DD" package_name="HDI_XML_Commands_thread_safe" structure_file_name="HowDoI" last_opening_mode="1">
+		<journal_file journal_file_enabled="false"/>
+	</base_extra>
+</base>

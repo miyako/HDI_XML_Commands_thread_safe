@@ -1,0 +1,34 @@
+{
+	"tables": {
+		"(Process_Time)": {
+			"color": {
+				"red": "255",
+				"green": "255",
+				"blue": "255",
+				"alpha": "0"
+			},
+			"coordinates": {
+				"left": "113.78125",
+				"top": "39.76953125",
+				"width": "150.63671875",
+				"height": "183.7421875"
+			},
+			"displayable_fields_count": 6
+		},
+		"SAMPLES": {
+			"color": {
+				"red": "255",
+				"green": "255",
+				"blue": "255",
+				"alpha": "0"
+			},
+			"coordinates": {
+				"left": "370.6953125",
+				"top": "8.31640625",
+				"width": "120",
+				"height": "167.33203125"
+			},
+			"displayable_fields_count": 6
+		}
+	}
+}

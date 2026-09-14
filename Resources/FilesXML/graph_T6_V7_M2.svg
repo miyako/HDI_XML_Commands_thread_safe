@@ -1,0 +1,559 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" id="ID_svg" viewBox="0 0 1018.04 448" viewport-fill="none" viewport-fill-opacity="1" xmlns:exsl4D="http://www.4D.com" xmlns:gFunc="http://gFunc" xmlns:math="http://exslt.org/math" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!--gradient styles-->
+
+  <defs>
+    <filter id="soft_blur">
+      <feGaussianBlur in="SourceGraphic" result="BlurAlpha" stdDeviation="1"/>
+    </filter>
+    <filter id="pastel">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="2"/>
+      <feOffset dx="6" dy="6" in="blur" result="offsetBlur"/>
+      <feComposite in="SourceGraphic" in2="offsetBlur" operator="in" result="specOut"/>
+    </filter>
+    <filter id="blur_shadow">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="3"/>
+      <feOffset dx="4" dy="2" in="blur" result="offsetBlur"/>
+      <feBlend in="SourceGraphic" in2="offsetBlur" mode="normal"/>
+    </filter>
+    <filter filterUnits="objectBoundingBox" id="Shadow">
+      <feGaussianBlur in="SourceAlpha" result="flou" stdDeviation="0"/>
+      <feColorMatrix in="SourceAlpha" result="flouBlue" type="matrix" values=" 0 0 0 0 0                      0 0 0 0 0                     0 0 0 0 0                      0 0 0 0.3 0"/>
+      <feOffset dx="4" dy="4" in="flouBlue" result="flouDecalage"/>
+      <feBlend in="SourceGraphic" in2="flouDecalage" mode="normal"/>
+    </filter>
+    <filter filterUnits="objectBoundingBox" height="100%" id="SaturateMinus" width="100%" x="0%" y="0%">
+      <feColorMatrix in="SourceGraphic" type="saturate" values="0.5"/>
+    </filter>
+    <filter filterUnits="objectBoundingBox" height="100%" id="SaturatePlus" width="100%" x="0%" y="0%">
+      <feColorMatrix in="SourceGraphic" type="saturate" values="1.4"/>
+    </filter>
+    <linearGradient id="BlackGradient">
+      <stop offset="0%" style="stop-color:rgb(0,0,0); stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:rgb(0,0,0); stop-opacity:0.1"/>
+    </linearGradient>
+    <linearGradient id="WhiteGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(255,255,255); stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="WhiteBlackGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(255,255,255); stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:0.15"/>
+    </linearGradient>
+    <linearGradient id="Black0Black1Gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(0,0,0); stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!--global stroke and font styles-->
+
+  <g id="ID_globals" style="fill:black;stroke:none;font-family:Arial;font-size:12px;font-weight:normal;font-style:normal;text-decoration:none;shape-rendering:crispEdges">
+    <!--draw title-->
+    <!--********************************draw graph background********************************-->
+    <rect fill="rgb(168,168,168)" height="400" id="ID_background_shadow" opacity="1" rx="10" ry="10" stroke="none" transform="translate(1,1)" visibility="visible" width="800.04" x="42" y="12"/>
+    <g fill="rgb(229,229,229)" id="ID_background" opacity="1" stroke="none" visibility="visible">
+      <rect height="400" rx="10" ry="10" stroke="none" width="800.04" x="42" y="12"/>
+      <rect fill="url(#Black0Black1Gradient)" height="400" rx="10" ry="10" stroke="none" width="800.04" x="42" y="12"/>
+    </g>
+    <clipPath id="ID_backgroundClipPath">
+      <rect height="401" rx="10" ry="10" width="801.04" x="41" y="11"/>
+    </clipPath>
+    <!--********************************draw Y Labels********************************-->
+    <g id="ID_y$value" style="fill:black;stroke:none;font-family:Arial;font-size:12px;font-weight:normal;font-style:normal;text-decoration:none;filter:none" visibility="visible">
+      <text text-anchor="end" x="30" y="18">15</text>
+      <text text-anchor="end" x="30" y="58">12</text>
+      <text text-anchor="end" x="30" y="98">9</text>
+      <text text-anchor="end" x="30" y="138">6</text>
+      <text text-anchor="end" x="30" y="178">3</text>
+      <text text-anchor="end" x="30" y="218">0</text>
+      <text text-anchor="end" x="30" y="258">-3</text>
+      <text text-anchor="end" x="30" y="298">-6</text>
+      <text text-anchor="end" x="30" y="338">-9</text>
+      <text text-anchor="end" x="30" y="378">-12</text>
+      <text text-anchor="end" x="30" y="418">-15</text>
+    </g>
+    <!--********************************draw X Labels********************************-->
+    <!--draw axis x labels-->
+    <g id="ID_x$value" style="fill:black;stroke:none;font-family:Arial;font-size:12px;font-weight:normal;font-style:normal;text-decoration:none;filter:none" visibility="visible">
+      <text text-anchor="middle" x="42" y="436">06:00:00</text>
+      <text text-anchor="middle" x="108.67" y="436">07:00:00</text>
+      <text text-anchor="middle" x="175.34" y="436">08:00:00</text>
+      <text text-anchor="middle" x="242.01" y="436">09:00:00</text>
+      <text text-anchor="middle" x="308.68" y="436">10:00:00</text>
+      <text text-anchor="middle" x="375.35" y="436">11:00:00</text>
+      <text text-anchor="middle" x="442.02" y="436">12:00:00</text>
+      <text text-anchor="middle" x="508.69" y="436">13:00:00</text>
+      <text text-anchor="middle" x="575.36" y="436">14:00:00</text>
+      <text text-anchor="middle" x="642.03" y="436">15:00:00</text>
+      <text text-anchor="middle" x="708.7" y="436">16:00:00</text>
+      <text text-anchor="middle" x="775.37" y="436">17:00:00</text>
+      <text text-anchor="middle" x="842.04" y="436">18:00:00</text>
+    </g>
+    <g style="clip-path: url(#ID_backgroundClipPath)">
+      <!--******************************** draw Y grid lines******************************** (Horizontal lines)-->
+      <g id="ID_y_grid" stroke="#a8a8a8" stroke-width="1">
+        <line x1="42" x2="842.04" y1="52" y2="52"/>
+        <line x1="42" x2="842.04" y1="92" y2="92"/>
+        <line x1="42" x2="842.04" y1="132" y2="132"/>
+        <line x1="42" x2="842.04" y1="172" y2="172"/>
+        <line x1="42" x2="842.04" y1="212" y2="212"/>
+        <line x1="42" x2="842.04" y1="252" y2="252"/>
+        <line x1="42" x2="842.04" y1="292" y2="292"/>
+        <line x1="42" x2="842.04" y1="332" y2="332"/>
+        <line x1="42" x2="842.04" y1="372" y2="372"/>
+      </g>
+      <!--draw Y grid lines SHADOWS-->
+      <g id="ID_y_grid_shadow" stroke="#ffffff" stroke-width="1">
+        <line transform="translate(0,1)" x1="42" x2="842.04" y1="52" y2="52"/>
+        <line transform="translate(0,1)" x1="42" x2="842.04" y1="92" y2="92"/>
+        <line transform="translate(0,1)" x1="42" x2="842.04" y1="132" y2="132"/>
+        <line transform="translate(0,1)" x1="42" x2="842.04" y1="172" y2="172"/>
+        <line transform="translate(0,1)" x1="42" x2="842.04" y1="212" y2="212"/>
+        <line transform="translate(0,1)" x1="42" x2="842.04" y1="252" y2="252"/>
+        <line transform="translate(0,1)" x1="42" x2="842.04" y1="292" y2="292"/>
+        <line transform="translate(0,1)" x1="42" x2="842.04" y1="332" y2="332"/>
+        <line transform="translate(0,1)" x1="42" x2="842.04" y1="372" y2="372"/>
+      </g>
+      <g id="ID_y0_axis" stroke="rgb(100,100,100)" stroke-width="1" visibility="visible">
+        <line x1="42" x2="842.04" y1="212" y2="212"/>
+      </g>
+      <!--********************************draw X grid lines******************************** (Vertical lines)-->
+      <g id="ID_x_grid" stroke="#a8a8a8" stroke-width="1">
+        <line x1="108.67" x2="108.67" y1="12" y2="412"/>
+        <line x1="175.34" x2="175.34" y1="12" y2="412"/>
+        <line x1="242.01" x2="242.01" y1="12" y2="412"/>
+        <line x1="308.68" x2="308.68" y1="12" y2="412"/>
+        <line x1="375.35" x2="375.35" y1="12" y2="412"/>
+        <line x1="442.02" x2="442.02" y1="12" y2="412"/>
+        <line x1="508.69" x2="508.69" y1="12" y2="412"/>
+        <line x1="575.36" x2="575.36" y1="12" y2="412"/>
+        <line x1="642.03" x2="642.03" y1="12" y2="412"/>
+        <line x1="708.7" x2="708.7" y1="12" y2="412"/>
+        <line x1="775.37" x2="775.37" y1="12" y2="412"/>
+      </g>
+      <!--draw X grid lines SHADOWS -->
+      <g id="ID_x_grid_shadow" stroke="#ffffff" stroke-width="1">
+        <line transform="translate(1,0)" x1="108.67" x2="108.67" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="175.34" x2="175.34" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="242.01" x2="242.01" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="308.68" x2="308.68" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="375.35" x2="375.35" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="442.02" x2="442.02" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="508.69" x2="508.69" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="575.36" x2="575.36" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="642.03" x2="642.03" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="708.7" x2="708.7" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="775.37" x2="775.37" y1="12" y2="412"/>
+      </g>
+    </g>
+    <!--******************************** draw legend ***********************************-->
+    <g filter="none" id="ID_legend" transform="translate(854.04,12)" visibility="visible">
+      <!--draw legend border-->
+      <rect fill="rgb(168,168,168)" fill-opacity="1" height="220" id="ID_legend_border_shadow" rx="10" ry="10" stroke="none" transform="translate(1,1)" width="152" x="0" y="0"/>
+      <rect fill="rgb(229,229,229)" fill-opacity="1" height="220" id="ID_legend_border" rx="10" ry="10" stroke="none" stroke-width="0" width="152" x="0" y="0"/>
+      <!--draw legend bullets-->
+      <g id="ID_legend_bullets" stroke="none">
+        <g fill="rgb(0,178,195)" id="ID_legend_1">
+          <rect height="20" rx="3" ry="3" width="20" x="10" y="10"/>
+          <rect fill="url(#WhiteBlackGradient)" height="20" rx="3" ry="3" width="20" x="10" y="10"/>
+          <rect fill-opacity="0.3" filter="url(#SaturateMinus)" height="20" rx="3" ry="3" width="20" x="10" y="10"/>
+        </g>
+        <g fill="rgb(255,195,56)" id="ID_legend_2">
+          <rect height="20" rx="3" ry="3" width="20" x="10" y="40"/>
+          <rect fill="url(#WhiteBlackGradient)" height="20" rx="3" ry="3" width="20" x="10" y="40"/>
+          <rect fill-opacity="0.3" filter="url(#SaturateMinus)" height="20" rx="3" ry="3" width="20" x="10" y="40"/>
+        </g>
+        <g fill="rgb(87,62,130)" id="ID_legend_3">
+          <rect height="20" rx="3" ry="3" width="20" x="10" y="70"/>
+          <rect fill="url(#WhiteBlackGradient)" height="20" rx="3" ry="3" width="20" x="10" y="70"/>
+          <rect fill-opacity="0.3" filter="url(#SaturateMinus)" height="20" rx="3" ry="3" width="20" x="10" y="70"/>
+        </g>
+        <g fill="rgb(79,168,57)" id="ID_legend_4">
+          <rect height="20" rx="3" ry="3" width="20" x="10" y="100"/>
+          <rect fill="url(#WhiteBlackGradient)" height="20" rx="3" ry="3" width="20" x="10" y="100"/>
+          <rect fill-opacity="0.3" filter="url(#SaturateMinus)" height="20" rx="3" ry="3" width="20" x="10" y="100"/>
+        </g>
+        <g fill="rgb(217,87,0)" id="ID_legend_5">
+          <rect height="20" rx="3" ry="3" width="20" x="10" y="130"/>
+          <rect fill="url(#WhiteBlackGradient)" height="20" rx="3" ry="3" width="20" x="10" y="130"/>
+          <rect fill-opacity="0.3" filter="url(#SaturateMinus)" height="20" rx="3" ry="3" width="20" x="10" y="130"/>
+        </g>
+        <g fill="rgb(29,157,242)" id="ID_legend_6">
+          <rect height="20" rx="3" ry="3" width="20" x="10" y="160"/>
+          <rect fill="url(#WhiteBlackGradient)" height="20" rx="3" ry="3" width="20" x="10" y="160"/>
+          <rect fill-opacity="0.3" filter="url(#SaturateMinus)" height="20" rx="3" ry="3" width="20" x="10" y="160"/>
+        </g>
+        <g fill="rgb(181,207,50)" id="ID_legend_7">
+          <rect height="20" rx="3" ry="3" width="20" x="10" y="190"/>
+          <rect fill="url(#WhiteBlackGradient)" height="20" rx="3" ry="3" width="20" x="10" y="190"/>
+          <rect fill-opacity="0.3" filter="url(#SaturateMinus)" height="20" rx="3" ry="3" width="20" x="10" y="190"/>
+        </g>
+      </g>
+      <!--draw legend labels-->
+      <g id="ID_legend_labels" style="fill:black;stroke:none;font-family:Arial;;font-weight:normal;font-style:normal;text-decoration:none;filter:none;text-anchor:start">
+        <text x="40" y="27">Sharp</text>
+        <text x="40" y="57">Infinity</text>
+        <text x="40" y="87">Audio Référence</text>
+        <text x="40" y="117">Triangle</text>
+        <text x="40" y="147">Yamaha</text>
+        <text x="40" y="177">Onkyo</text>
+        <text x="40" y="207">Sony</text>
+      </g>
+    </g>
+    <g style="clip-path: url(#ID_backgroundClipPath)">
+      <g fill="rgb(0,178,195)" filter="None" id="ID_graph_1" opacity="1" stroke="none" stroke-opacity="1" stroke-width="0">
+        <g transform="translate(175.34,225.33)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(242.01,185.33)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(308.68,252)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(375.35,158.67)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(392.02,278.67)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(625.36,132)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(642.03,305.33)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(708.7,105.33)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+      </g>
+      <g fill="rgb(255,195,56)" filter="None" id="ID_graph_2" opacity="1" stroke="none" stroke-opacity="1" stroke-width="0">
+        <g transform="translate(175.34,226.67)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(242.01,182.67)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(308.68,256)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(375.35,153.33)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(392.02,285.33)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(625.36,124)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(642.03,314.67)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(708.7,94.67)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+      </g>
+      <g fill="rgb(87,62,130)" filter="None" id="ID_graph_3" opacity="1" stroke="none" stroke-opacity="1" stroke-width="0">
+        <g transform="translate(175.34,228.13)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(242.01,179.73)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(308.68,260.4)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(375.35,147.47)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(392.02,292.67)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(625.36,115.2)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(642.03,324.93)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(708.7,82.93)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+      </g>
+      <g fill="rgb(79,168,57)" filter="None" id="ID_graph_4" opacity="1" stroke="none" stroke-opacity="1" stroke-width="0">
+        <g transform="translate(175.34,229.75)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(242.01,176.51)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(308.68,265.24)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(375.35,141.01)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(392.02,300.73)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(625.36,105.52)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(642.03,336.23)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(708.7,70.03)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+      </g>
+      <g fill="rgb(217,87,0)" filter="None" id="ID_graph_5" opacity="1" stroke="none" stroke-opacity="1" stroke-width="0">
+        <g transform="translate(175.34,231.52)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(242.01,172.96)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(308.68,270.56)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(375.35,133.91)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(392.02,309.61)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(625.36,94.87)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(642.03,348.65)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(708.7,55.83)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+      </g>
+      <g fill="rgb(29,157,242)" filter="None" id="ID_graph_6" opacity="1" stroke="none" stroke-opacity="1" stroke-width="0">
+        <g transform="translate(175.34,233.47)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(242.01,169.05)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(308.68,276.42)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(375.35,126.11)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(392.02,319.37)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(625.36,83.16)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(642.03,362.31)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(708.7,40.21)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+      </g>
+      <g fill="rgb(181,207,50)" filter="None" id="ID_graph_7" opacity="1" stroke="none" stroke-opacity="1" stroke-width="0">
+        <g transform="translate(175.34,235.62)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(242.01,164.76)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(308.68,282.86)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(375.35,117.52)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(392.02,330.1)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(625.36,70.28)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(642.03,377.35)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+        <g transform="translate(708.7,23.03)">
+          <circle cx="0" cy="0" fill-opacity="1" r="12"/>
+          <circle cx="0" cy="0" fill="url(#WhiteGradient)" r="12"/>
+          <circle cx="0" cy="0" fill-opacity="0.4" filter="url(#SaturateMinus)" r="12"/>
+          <circle cx="0" cy="0" fill="url(#BlackGradient)" r="12"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+</svg>

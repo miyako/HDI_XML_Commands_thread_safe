@@ -1,0 +1,209 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" id="ID_svg" viewBox="0 0 927.92 448" viewport-fill="none" viewport-fill-opacity="1" xmlns:exsl4D="http://www.4D.com" xmlns:gFunc="http://gFunc" xmlns:math="http://exslt.org/math" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!--gradient styles-->
+
+  <defs>
+    <filter id="soft_blur">
+      <feGaussianBlur in="SourceGraphic" result="BlurAlpha" stdDeviation="1"/>
+    </filter>
+    <filter id="pastel">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="2"/>
+      <feOffset dx="6" dy="6" in="blur" result="offsetBlur"/>
+      <feComposite in="SourceGraphic" in2="offsetBlur" operator="in" result="specOut"/>
+    </filter>
+    <filter id="blur_shadow">
+      <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="3"/>
+      <feOffset dx="4" dy="2" in="blur" result="offsetBlur"/>
+      <feBlend in="SourceGraphic" in2="offsetBlur" mode="normal"/>
+    </filter>
+    <filter filterUnits="objectBoundingBox" id="Shadow">
+      <feGaussianBlur in="SourceAlpha" result="flou" stdDeviation="0"/>
+      <feColorMatrix in="SourceAlpha" result="flouBlue" type="matrix" values=" 0 0 0 0 0                      0 0 0 0 0                     0 0 0 0 0                      0 0 0 0.3 0"/>
+      <feOffset dx="4" dy="4" in="flouBlue" result="flouDecalage"/>
+      <feBlend in="SourceGraphic" in2="flouDecalage" mode="normal"/>
+    </filter>
+    <filter filterUnits="objectBoundingBox" height="100%" id="SaturateMinus" width="100%" x="0%" y="0%">
+      <feColorMatrix in="SourceGraphic" type="saturate" values="0.5"/>
+    </filter>
+    <filter filterUnits="objectBoundingBox" height="100%" id="SaturatePlus" width="100%" x="0%" y="0%">
+      <feColorMatrix in="SourceGraphic" type="saturate" values="1.4"/>
+    </filter>
+    <linearGradient id="BlackGradient">
+      <stop offset="0%" style="stop-color:rgb(0,0,0); stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:rgb(0,0,0); stop-opacity:0.1"/>
+    </linearGradient>
+    <linearGradient id="WhiteGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(255,255,255); stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="WhiteBlackGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(255,255,255); stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:0.15"/>
+    </linearGradient>
+    <linearGradient id="Black0Black1Gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(0,0,0); stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:0.05"/>
+    </linearGradient>
+    <image filter="none" height="100" id="pictG8_1" preserveAspectRatio="none" width="100" xlink:href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIiB2aWV3cG9ydC1maWxsPSJub25lIiB2aWV3cG9ydC1maWxsLW9wYWNpdHk9IjEiIHZpZXdCb3g9IjAgMCAyNTAgMTAwMCI+CgogIDxkZWZzPgogICAgPGZpbHRlciBpZD0iZjEiIHg9IjAiIHk9IjAiPgogICAgICA8ZmVHYXVzc2lhbkJsdXIgaW49IlNvdXJjZUdyYXBoaWMiIHN0ZERldmlhdGlvbj0iMS41IiAvPgogICAgPC9maWx0ZXI+CgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkMSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2IoMjM2LDIzMSwyMDkpO3N0b3Atb3BhY2l0eToxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOnJnYigyMTYsMjA2LDE1OSk7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgoKICA8L2RlZnM+CgoJPGcgZmlsbD0icmdiKDAsMTc4LDE5NSkiPgoJCQoJCTxwYXRoIGQ9Ik0xMDAgMCBsMTAwIDIwMCBsMCA4MDAgbC0yMDAgMCAtMCAtODAwIFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQwLDIwKSIgZmlsbCA9ICJibGFjayIgZmlsbC1vcGFjaXR5PSIwLjQiIGZpbHRlcj0idXJsKCNmMSkiLz4KCQkJCQoJCTxwYXRoIGQ9Ik0xMDAgMCBsMTAwIDIwMCBsMCA4MDAgbC0yMDAgMCAtMCAtODAwIFoiIGZpbGwgPSAid2hpdGUiLz4KCQkKCQk8cGF0aCBkPSJNMTAwIDAgbDUwIDEwMCBsLTEwMCAwIFoiLz4KCgkJPHBhdGggZD0iTTAwMCAyMDAgcSAyNSAtMjAgNTAgMCBxIDUwIC0yMCAxMDAgMCBxIDI1IC0yMCA1MCAwIGwtNTAgLTEwMCBsLTEwMCAwIFoiIGZpbGw9InVybCgjZ3JhZDEpIi8+CgkJCgkJPHBhdGggZD0iTTAwMCAyMDAgcSAyNSAtMjAgNTAgMCBsMCA4MDAgbCAtNTAgMCBaIiBmaWxsLW9wYWNpdHk9IjAuNiIvPgkJCQkKCQk8cGF0aCBkPSJNNTAgMjAwIHEgNTAgLTIwIDEwMCAwIGwwIDgwMCBsIC0xMDAgMCBaIiBmaWxsLW9wYWNpdHk9IjAuOCIvPgoJCTxwYXRoIGQ9Ik0xNTAgMjAwIHEgMjUgLTIwIDUwIDAgbDAgODAwIGwgLTUwIDAgWiIvPgoJCQoJPC9nPgoJCjwvc3ZnPg=="/>
+    <image filter="none" height="100" id="pictG8_2" preserveAspectRatio="none" width="100" xlink:href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMjUwIDEwMDAiPgoKICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9ImYxIiB4PSIwIiB5PSIwIj4KICAgICAgPGZlR2F1c3NpYW5CbHVyIGluPSJTb3VyY2VHcmFwaGljIiBzdGREZXZpYXRpb249IjEuNSIgLz4KICAgIDwvZmlsdGVyPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkMSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2IoMjM2LDIzMSwyMDkpO3N0b3Atb3BhY2l0eToxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOnJnYigyMTYsMjA2LDE1OSk7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KCgk8ZyBmaWxsPSJyZ2IoMjU1LDE5NSw1NikiPgoJCQoJCTxwYXRoIGQ9Ik0xMDAgMCBsMTAwIDIwMCBsMCA4MDAgbC0yMDAgMCAtMCAtODAwIFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQwLDIwKSIgZmlsbCA9ICJibGFjayIgZmlsbC1vcGFjaXR5PSIwLjQiIGZpbHRlcj0idXJsKCNmMSkiLz4KCQkJCQoJCTxwYXRoIGQ9Ik0xMDAgMCBsMTAwIDIwMCBsMCA4MDAgbC0yMDAgMCAtMCAtODAwIFoiIGZpbGwgPSAid2hpdGUiLz4KCQkKCQk8cGF0aCBkPSJNMTAwIDAgbDUwIDEwMCBsLTEwMCAwIFoiLz4KCgkJPHBhdGggZD0iTTAwMCAyMDAgcSAyNSAtMjAgNTAgMCBxIDUwIC0yMCAxMDAgMCBxIDI1IC0yMCA1MCAwIGwtNTAgLTEwMCBsLTEwMCAwIFoiIGZpbGw9InVybCgjZ3JhZDEpIi8+CgkJCgkJPHBhdGggZD0iTTAwMCAyMDAgcSAyNSAtMjAgNTAgMCBsMCA4MDAgbCAtNTAgMCBaIiBmaWxsLW9wYWNpdHk9IjAuNiIvPgkJCQkKCQk8cGF0aCBkPSJNNTAgMjAwIHEgNTAgLTIwIDEwMCAwIGwwIDgwMCBsIC0xMDAgMCBaIiBmaWxsLW9wYWNpdHk9IjAuOCIvPgoJCTxwYXRoIGQ9Ik0xNTAgMjAwIHEgMjUgLTIwIDUwIDAgbDAgODAwIGwgLTUwIDAgWiIvPgkJCgk8L2c+CgkKPC9zdmc+"/>
+    <image filter="none" height="100" id="pictG8_3" preserveAspectRatio="none" width="100" xlink:href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMjUwIDEwMDAiPgoKICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9ImYxIiB4PSIwIiB5PSIwIj4KICAgICAgPGZlR2F1c3NpYW5CbHVyIGluPSJTb3VyY2VHcmFwaGljIiBzdGREZXZpYXRpb249IjEuNSIgLz4KICAgIDwvZmlsdGVyPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkMSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2IoMjM2LDIzMSwyMDkpO3N0b3Atb3BhY2l0eToxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOnJnYigyMTYsMjA2LDE1OSk7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KCgk8ZyBmaWxsPSJyZ2IoODcsNjIsMTMwKSI+CgkJCgkJPHBhdGggZD0iTTEwMCAwIGwxMDAgMjAwIGwwIDgwMCBsLTIwMCAwIC0wIC04MDAgWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAsMjApIiBmaWxsID0gImJsYWNrIiBmaWxsLW9wYWNpdHk9IjAuNCIgZmlsdGVyPSJ1cmwoI2YxKSIvPgoJCQkJCgkJPHBhdGggZD0iTTEwMCAwIGwxMDAgMjAwIGwwIDgwMCBsLTIwMCAwIC0wIC04MDAgWiIgZmlsbCA9ICJ3aGl0ZSIvPgoJCQoJCTxwYXRoIGQ9Ik0xMDAgMCBsNTAgMTAwIGwtMTAwIDAgWiIvPgoKCQk8cGF0aCBkPSJNMDAwIDIwMCBxIDI1IC0yMCA1MCAwIHEgNTAgLTIwIDEwMCAwIHEgMjUgLTIwIDUwIDAgbC01MCAtMTAwIGwtMTAwIDAgWiIgZmlsbD0idXJsKCNncmFkMSkiLz4KCQkKCQk8cGF0aCBkPSJNMDAwIDIwMCBxIDI1IC0yMCA1MCAwIGwwIDgwMCBsIC01MCAwIFoiIGZpbGwtb3BhY2l0eT0iMC42Ii8+CQkJCQoJCTxwYXRoIGQ9Ik01MCAyMDAgcSA1MCAtMjAgMTAwIDAgbDAgODAwIGwgLTEwMCAwIFoiIGZpbGwtb3BhY2l0eT0iMC44Ii8+CgkJPHBhdGggZD0iTTE1MCAyMDAgcSAyNSAtMjAgNTAgMCBsMCA4MDAgbCAtNTAgMCBaIi8+CQkKCTwvZz4KCQo8L3N2Zz4="/>
+  </defs>
+
+  <!--global stroke and font styles-->
+
+  <g id="ID_globals" style="fill:black;stroke:none;font-family:Arial;font-size:12px;font-weight:normal;font-style:normal;text-decoration:none;shape-rendering:crispEdges">
+    <!--draw title-->
+    <!--********************************draw graph background********************************-->
+    <rect fill="rgb(168,168,168)" height="400" id="ID_background_shadow" opacity="1" rx="10" ry="10" stroke="none" transform="translate(1,1)" visibility="visible" width="799.92" x="42" y="12"/>
+    <g fill="rgb(229,229,229)" id="ID_background" opacity="1" stroke="none" visibility="visible">
+      <rect height="400" rx="10" ry="10" stroke="none" width="799.92" x="42" y="12"/>
+      <rect fill="url(#Black0Black1Gradient)" height="400" rx="10" ry="10" stroke="none" width="799.92" x="42" y="12"/>
+    </g>
+    <clipPath id="ID_backgroundClipPath">
+      <rect height="401" rx="10" ry="10" width="800.92" x="41" y="11"/>
+    </clipPath>
+    <!--********************************draw Y Labels********************************-->
+    <g id="ID_y$value" style="fill:black;stroke:none;font-family:Arial;font-size:12px;font-weight:normal;font-style:normal;text-decoration:none;filter:none" visibility="visible">
+      <text text-anchor="end" x="30" y="18">10</text>
+      <text text-anchor="end" x="30" y="58">8</text>
+      <text text-anchor="end" x="30" y="98">6</text>
+      <text text-anchor="end" x="30" y="138">4</text>
+      <text text-anchor="end" x="30" y="178">2</text>
+      <text text-anchor="end" x="30" y="218">0</text>
+      <text text-anchor="end" x="30" y="258">-2</text>
+      <text text-anchor="end" x="30" y="298">-4</text>
+      <text text-anchor="end" x="30" y="338">-6</text>
+      <text text-anchor="end" x="30" y="378">-8</text>
+      <text text-anchor="end" x="30" y="418">-10</text>
+    </g>
+    <!--********************************draw X Labels********************************-->
+    <!--draw axis x labels-->
+    <g id="ID_x$value" style="fill:black;stroke:none;font-family:Arial;font-size:12px;font-weight:normal;font-style:normal;text-decoration:none;filter:none" visibility="visible">
+      <text text-anchor="middle" x="91.995" y="436">08:00:00</text>
+      <text text-anchor="middle" x="191.985" y="436">09:00:00</text>
+      <text text-anchor="middle" x="291.975" y="436">10:00:00</text>
+      <text text-anchor="middle" x="391.965" y="436">11:00:00</text>
+      <text text-anchor="middle" x="491.955" y="436">11:15:00</text>
+      <text text-anchor="middle" x="591.945" y="436">14:45:00</text>
+      <text text-anchor="middle" x="691.935" y="436">15:00:00</text>
+      <text text-anchor="middle" x="791.925" y="436">16:00:00</text>
+    </g>
+    <g style="clip-path: url(#ID_backgroundClipPath)">
+      <!--******************************** draw Y grid lines******************************** (Horizontal lines)-->
+      <g id="ID_y_grid" stroke="#a8a8a8" stroke-width="1">
+        <line x1="42" x2="841.92" y1="52" y2="52"/>
+        <line x1="42" x2="841.92" y1="92" y2="92"/>
+        <line x1="42" x2="841.92" y1="132" y2="132"/>
+        <line x1="42" x2="841.92" y1="172" y2="172"/>
+        <line x1="42" x2="841.92" y1="212" y2="212"/>
+        <line x1="42" x2="841.92" y1="252" y2="252"/>
+        <line x1="42" x2="841.92" y1="292" y2="292"/>
+        <line x1="42" x2="841.92" y1="332" y2="332"/>
+        <line x1="42" x2="841.92" y1="372" y2="372"/>
+      </g>
+      <!--draw Y grid lines SHADOWS-->
+      <g id="ID_y_grid_shadow" stroke="#ffffff" stroke-width="1">
+        <line transform="translate(0,1)" x1="42" x2="841.92" y1="52" y2="52"/>
+        <line transform="translate(0,1)" x1="42" x2="841.92" y1="92" y2="92"/>
+        <line transform="translate(0,1)" x1="42" x2="841.92" y1="132" y2="132"/>
+        <line transform="translate(0,1)" x1="42" x2="841.92" y1="172" y2="172"/>
+        <line transform="translate(0,1)" x1="42" x2="841.92" y1="212" y2="212"/>
+        <line transform="translate(0,1)" x1="42" x2="841.92" y1="252" y2="252"/>
+        <line transform="translate(0,1)" x1="42" x2="841.92" y1="292" y2="292"/>
+        <line transform="translate(0,1)" x1="42" x2="841.92" y1="332" y2="332"/>
+        <line transform="translate(0,1)" x1="42" x2="841.92" y1="372" y2="372"/>
+      </g>
+      <g id="ID_y0_axis" stroke="rgb(100,100,100)" stroke-width="1" visibility="visible">
+        <line x1="42" x2="841.92" y1="212" y2="212"/>
+      </g>
+      <!--********************************draw X grid lines******************************** (Vertical lines)-->
+      <g id="ID_x_grid" stroke="#a8a8a8" stroke-width="1">
+        <line x1="141.99" x2="141.99" y1="12" y2="412"/>
+        <line x1="241.98" x2="241.98" y1="12" y2="412"/>
+        <line x1="341.97" x2="341.97" y1="12" y2="412"/>
+        <line x1="441.96" x2="441.96" y1="12" y2="412"/>
+        <line x1="541.95" x2="541.95" y1="12" y2="412"/>
+        <line x1="641.94" x2="641.94" y1="12" y2="412"/>
+        <line x1="741.93" x2="741.93" y1="12" y2="412"/>
+        <line x1="841.92" x2="841.92" y1="12" y2="412"/>
+      </g>
+      <!--draw X grid lines SHADOWS -->
+      <g id="ID_x_grid_shadow" stroke="#ffffff" stroke-width="1">
+        <line transform="translate(1,0)" x1="141.99" x2="141.99" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="241.98" x2="241.98" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="341.97" x2="341.97" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="441.96" x2="441.96" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="541.95" x2="541.95" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="641.94" x2="641.94" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="741.93" x2="741.93" y1="12" y2="412"/>
+        <line transform="translate(1,0)" x1="841.92" x2="841.92" y1="12" y2="412"/>
+      </g>
+    </g>
+    <!--******************************** draw legend ***********************************-->
+    <g filter="none" id="ID_legend" transform="translate(853.92,12)" visibility="visible">
+      <!--draw legend border-->
+      <rect fill="rgb(168,168,168)" fill-opacity="1" height="100" id="ID_legend_border_shadow" rx="10" ry="10" stroke="none" transform="translate(1,1)" width="62" x="0" y="0"/>
+      <rect fill="rgb(229,229,229)" fill-opacity="1" height="100" id="ID_legend_border" rx="10" ry="10" stroke="none" stroke-width="0" width="62" x="0" y="0"/>
+      <!--draw legend bullets-->
+      <g id="ID_legend_bullets" stroke="none">
+        <g id="ID_legend_1">
+          <g transform="translate(10,10)">
+            <use transform="scale(0.2,0.2)" xlink:href="#pictG8_1"/>
+          </g>
+        </g>
+        <g id="ID_legend_2">
+          <g transform="translate(10,40)">
+            <use transform="scale(0.2,0.2)" xlink:href="#pictG8_2"/>
+          </g>
+        </g>
+        <g id="ID_legend_3">
+          <g transform="translate(10,70)">
+            <use transform="scale(0.2,0.2)" xlink:href="#pictG8_3"/>
+          </g>
+        </g>
+      </g>
+      <!--draw legend labels-->
+      <g id="ID_legend_labels" style="fill:black;stroke:none;font-family:Arial;;font-weight:normal;font-style:normal;text-decoration:none;filter:none;text-anchor:start">
+        <text x="40" y="27"/>
+        <text x="40" y="57"/>
+        <text x="40" y="87"/>
+      </g>
+    </g>
+    <!--####################################################################################################################################################################-->
+    <g style="clip-path: url(#ID_backgroundClipPath)">
+      <g id="ID_graph_1">
+        <use transform="translate(54,232) scale(0.17,-0.2)" xlink:href="#pictG8_1"/>
+        <use transform="translate(153.99,172) scale(0.17,0.4)" xlink:href="#pictG8_1"/>
+        <use transform="translate(253.98,272) scale(0.17,-0.6)" xlink:href="#pictG8_1"/>
+        <use transform="translate(353.97,132) scale(0.17,0.8)" xlink:href="#pictG8_1"/>
+        <use transform="translate(453.96,312) scale(0.17,-1)" xlink:href="#pictG8_1"/>
+        <use transform="translate(553.95,92) scale(0.17,1.2)" xlink:href="#pictG8_1"/>
+        <use transform="translate(653.94,352) scale(0.17,-1.4)" xlink:href="#pictG8_1"/>
+        <use transform="translate(753.93,52) scale(0.17,1.6)" xlink:href="#pictG8_1"/>
+      </g>
+      <g id="ID_graph_2">
+        <use transform="translate(83.33,234) scale(0.17,-0.22)" xlink:href="#pictG8_2"/>
+        <use transform="translate(183.32,168) scale(0.17,0.44)" xlink:href="#pictG8_2"/>
+        <use transform="translate(283.31,278) scale(0.17,-0.66)" xlink:href="#pictG8_2"/>
+        <use transform="translate(383.3,124) scale(0.17,0.88)" xlink:href="#pictG8_2"/>
+        <use transform="translate(483.29,322) scale(0.17,-1.1)" xlink:href="#pictG8_2"/>
+        <use transform="translate(583.28,80) scale(0.17,1.32)" xlink:href="#pictG8_2"/>
+        <use transform="translate(683.27,366) scale(0.17,-1.54)" xlink:href="#pictG8_2"/>
+        <use transform="translate(783.26,36) scale(0.17,1.76)" xlink:href="#pictG8_2"/>
+      </g>
+      <g id="ID_graph_3">
+        <use transform="translate(112.66,236) scale(0.17,-0.24)" xlink:href="#pictG8_3"/>
+        <use transform="translate(212.65,164) scale(0.17,0.48)" xlink:href="#pictG8_3"/>
+        <use transform="translate(312.64,285) scale(0.17,-0.73)" xlink:href="#pictG8_3"/>
+        <use transform="translate(412.63,115) scale(0.17,0.97)" xlink:href="#pictG8_3"/>
+        <use transform="translate(512.62,333) scale(0.17,-1.21)" xlink:href="#pictG8_3"/>
+        <use transform="translate(612.61,67) scale(0.17,1.45)" xlink:href="#pictG8_3"/>
+        <use transform="translate(712.6,381) scale(0.17,-1.69)" xlink:href="#pictG8_3"/>
+        <use transform="translate(812.59,18) scale(0.17,1.94)" xlink:href="#pictG8_3"/>
+      </g>
+    </g>
+    <!-- END CLIPPATH -->
+  </g>
+
+</svg>
